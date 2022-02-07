@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div id="navigation">
+        <a class="site-link" href="index.html">Home</a>
+        <a class="site-link" href="sites.html">Cool stuff</a>
+        <a class="site-link" href="wallpaper.html">Wallpaper</a>
+        <a class="site-link" href="https://github.com/LastWhiteRabbit" target="_blank">Github</a>
+        <a class="site-link" href="https://www.linkedin.com/in/elvedin-granulo/" target="_blank">Linkedin</a>
+        <img src="/images/play.png" id="picture">
+      </div>
+      <style>
+         @font-face {
+        font-family: myFont;
+        src: url(fonts/PressStart2P-vaV7.ttf);
+        }
+        body{
+          font-family: myFont;
+          background-image: url("images/background.gif");
+          background-size:cover;
+        }
+        #picture{
+          width: 40px;
+          cursor: pointer;
+        }
+      </style>
+
+      <audio id="song">
+          <source src="/music/Mushishi OST 2 Kago no Naka.mp3" type="audio/mp3"> 
+      </audio>
+
+      <script>
+        var mySong = document.getElementById("song");
+        var test = document.getElementById("picture");
+
+        picture.onclick = function(){
+            if(mySong.paused){
+              mySong.play();
+              picture.src = "images/pause.png";
+            }
+            else{
+              mySong.pause();
+              picture.src = "images/play.png";
+
+            }
+        }
+    </script>
+
+      <div id="content">
+        <div id="sec1">
+          <h2>Welcome to my site</h2>
+          <div id="paragraph1">
+            <p>Enjoy.</p>
+          </div>
+        </div>
+        <div id="name">Elvedin Granulo</div>
+      </div>
+    
+      <style>
+        #content{
+          width: 50%;
+          padding: 2%;
+        }
+
+        #scenary {
+          position: fixed;
+          left: -5px;
+          bottom: 0px;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+        #navigation{
+          z-index: 10;
+          font-family: myFont;
+
+        }
+
+        #name{
+          position: absolute;
+          top: 18%;
+          left: 50%;
+        }
+    
+      </style>
+      
+</body>
+</html>
